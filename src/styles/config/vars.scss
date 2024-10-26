@@ -1,33 +1,32 @@
-$maxWidth: 1920; // максимальная ширина страницы
-$minWidth: 320; // минимальная ширина телефона
+$maxWidth: 1400; // максимальная ширина страницы
+$minWidth: 375; // минимальная ширина телефона
 $maxWidthContainer: 1200; // ширина контейнера с учетом padding слева и справа
-$containerWidth: 1160; // ширина контейнера из макета
+$containerWidth: 1320; // ширина контейнера из макета
 
 $md1: $maxWidthContainer + 12;
 $md2: 991.98;
-$md3: 767.98;
+$md3: 768;
 $md4: 479.98;
 
 $mainOffset: 15; // отступы безопасности для контейнера
-$mainFont: ""; // !указать здесь основное семейство шрифта
+$mainFont: "HelveticaNeueCyr"; // !указать здесь основное семейство шрифта
 $mainWeight: 400; // !указать здесь основное начертание шрифта
 
 $headerHeight: 100;
 $footerHeight: 100;
 
 $mainRadius: rem(10);
-
+$backgroundDefault: #edf0f9;
 $whiteColor: #fff;
 $blackColor: #131313;
-$grayColor: #6f6f6f;
-$redColor: #ff4040;
+$blueColor: #5c74f1;
+$darkBlurColor: #324acc;
 
 $firstAccentColor: $blackColor;
-$secondAccentColor: $redColor;
 
-$fontFamily: $mainFont, sans-serif; // Семейство шрифта по умолчанию
+$fontFamily: $mainFont, sans-serif;
 $fontColor: $blackColor; // Цвет шрифта по умолчанию
-$fontSize: rem(16); // Размер шрифта по умолчанию
+$fontSize: rem(18); // Размер шрифта по умолчанию
 $fontWeight: $mainWeight; // Жирность шрифта по умолчанию
 
 $standartTrans: all 280ms ease-in-out 0ms;

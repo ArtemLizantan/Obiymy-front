@@ -1,62 +1,150 @@
 // =====================================================================================================================
 .header {
   width: 100%;
-  &.sticky {
-    // ..стили для липкого хедера
+  padding: rem(40) 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @media (max-width: $md4+px) {
+    padding: 23px 0;
   }
-  // .header__container
-  &__container {
-    height: rem($headerHeight);
+  &__body {
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: rem(25);
+    padding: 0 rem(50);
+    row-gap: rem(10);
+  }
+  &__list-link {
+    font-weight: 400;
+    font-size: rem(18);
+    letter-spacing: -0.01em;
+    color: $whiteColor;
   }
 }
-// =====================================================================================================================
 
-// Burger
-/*
-.icon-menu {
-  display: none;
-  @include media(767) {
+.burger {
+  background: $whiteColor;
+  border-radius: 15px;
+  padding: 11px 14px;
+
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  img {
+    width: 32px;
+    height: 19px;
+  }
+
+  &__icon {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  &__line {
+    width: 21px;
+    height: 2px;
+    background: $blueColor;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: $whiteColor;
+  padding: 17px 15px 100px 15px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 auto;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+  &__link {
     display: block;
-    position: relative;
-    width: rem(30);
-    height: rem(18);
-    cursor: pointer;
-    z-index: 5;
-    span,
-    &::before,
-    &::after {
-      content: "";
-      transition: all 300ms ease 0ms;
-      right: 0;
-      position: absolute;
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: -0.02em;
+    color: $blueColor;
+    width: 100%;
+    padding: 10px 0;
+  }
+  &__dropdown-link {
+    display: block;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+    color: $blueColor;
+    width: 100%;
+    padding: 10px 0;
+    font-weight: 500;
+  }
+  &__dropdown-li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    svg {
+      fill: $blueColor;
+    }
+  }
+  &__dropdown {
+    margin-bottom: 10px;
+  }
+  &__bottom {
+    width: 100%;
+    a {
       width: 100%;
-      height: rem(2);
-      background-color: #000;
+      padding: 20px 5px;
     }
-    &::before {
-      top: 0;
-    }
-    &::after {
-      bottom: 0;
-    }
-    span {
-      top: calc(50% - rem(1));
-    }
-    .menu-open & {
-      span {
-        width: 0;
-      }
-      &::before {
-        top: calc(50% - rem(1));
-        transform: rotate(-45deg);
-      }
-      &::after {
-        bottom: calc(50% - rem(1));
-        transform: rotate(45deg);
-      }
+  }
+  &__contacts-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__contacts-link {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 125%;
+    letter-spacing: -0.01em;
+    color: $blueColor;
+    padding: 10px 0;
+
+    @media (max-width: $md4+px) {
+      font-size: 16px;
     }
   }
 }
-*/

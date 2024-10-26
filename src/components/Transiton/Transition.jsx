@@ -1,8 +1,8 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { animate, motion } from "framer-motion";
 
-const transition = (OgComponent) => {
-  const title = ["O", "H", "M"];
+const withTransition = (OgComponent) => {
+  const title = ["O", "Б", "І", "Й", "М", "И"];
 
   return () => (
     <>
@@ -22,7 +22,29 @@ const transition = (OgComponent) => {
           transition: { duration: 1.5, ease: [0.76, 0, 0.24, 1] },
         }}
       >
-        <motion.div className=" w-fit overflow-hidden flex">
+        <motion.div className=" w-fit overflow-hidden flex items-center transition">
+          <motion.div
+            initial={{ y: 0, opacity: 1 }}
+            animate={{
+              opacity: 1,
+              y: "-140%",
+              transition: {
+                duration: 1,
+                delay: 0.2,
+                ease: [0.76, 0, 0.24, 1],
+              },
+            }}
+            exit={{
+              y: [150, 0],
+              transition: {
+                duration: 1.45,
+                delay: 0.35,
+                ease: [0.76, 0, 0.24, 1],
+              },
+            }}
+          >
+            <img src="/icons/logo-blue.svg" alt="" />
+          </motion.div>
           {title.map((letter, i) => (
             <motion.div
               key={i}
@@ -44,7 +66,7 @@ const transition = (OgComponent) => {
                   ease: [0.76, 0, 0.24, 1],
                 },
               }}
-              className="text-[1.8vw] md:text-[1.2v] 3xl:text-8xl -tracking-[0.1em] font-bold "
+              className="transition__logo"
             >
               {letter}
             </motion.div>
@@ -55,6 +77,4 @@ const transition = (OgComponent) => {
   );
 };
 
-transition.displayName = 'transition';
-
-export default transition;
+export { withTransition as transition };

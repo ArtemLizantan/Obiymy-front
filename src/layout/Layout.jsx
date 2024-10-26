@@ -1,15 +1,18 @@
-import PropTypes from "prop-types";
+import Header from "@/components/Header";
+import { useState } from "react";
+import { Outlet } from "react-router-dom";
 
-const Layout = ({ children }) => {
+const Layout = () => {
+  const [isFooterInView, setIsFooterInView] = useState(false);
+
   return (
     <>
-      <main className="rounded-xl bg-white">{children}</main>
+      <Header />
+      <main>
+        <Outlet context={{ isFooterInView }} />
+      </main>
     </>
   );
-};
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 };
 
 export default Layout;

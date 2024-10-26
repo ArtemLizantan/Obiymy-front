@@ -1,1 +1,75 @@
 // Заголовки, общие БЄМ блоки и проче...
+
+.logo-white,
+.logo-blue {
+  display: flex;
+  align-items: center;
+  gap: rem(9);
+  @media (max-width: $md3+px) {
+    gap: 9px;
+  }
+
+  img {
+    width: rem(41);
+    height: rem(24);
+    @media (max-width: $md3+px) {
+      width: 40px;
+      height: 25px;
+    }
+
+    @media (max-width: $md4+px) {
+      width: 31px;
+      height: 18px;
+    }
+  }
+  span {
+    font-weight: 500;
+    font-size: rem(32);
+    letter-spacing: -0.06em;
+    @media (max-width: $md3+px) {
+      font-size: 30px;
+    }
+
+    @media (max-width: $md4+px) {
+      font-size: 23px;
+    }
+  }
+}
+
+.logo-white {
+  span {
+    color: $whiteColor;
+  }
+}
+
+.logo-blue {
+  span {
+    color: $blueColor;
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $whiteColor;
+  border-radius: rem(100);
+  padding: rem(21) rem(50);
+  font-weight: 400;
+  font-size: rem(18);
+  color: $blueColor;
+  -webkit-border-radius: rem(100);
+  -moz-border-radius: rem(100);
+  -ms-border-radius: rem(100);
+  -o-border-radius: rem(100);
+
+  @media (max-width: $md3+px) {
+    padding: 15px 25px;
+    border-radius: 15px;
+    font-size: 16px;
+  }
+
+  @media (max-width: $md4+px) {
+    padding: 13px 22px;
+  }
+}

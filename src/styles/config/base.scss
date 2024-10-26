@@ -1,9 +1,20 @@
 body {
+  background: gray;
+  color: $whiteColor;
+  font-family: $mainFont;
   &.lock {
     overflow: hidden;
     touch-action: none;
   }
 }
+html {
+  font-size: 1vw;
+
+  @media (max-width: $md3+px) {
+    font-size: 18px;
+  }
+}
+
 // Базовые анимации:
 // @import "keyframes";
 
@@ -20,6 +31,11 @@ body {
   max-width: rem($containerWidth + $mainOffset * 2);
   margin: 0 auto;
   padding: 0 rem($mainOffset);
+
+  @media (max-width: $md4+px) {
+    max-width: unset;
+    padding: 0 15px;
+  }
 }
 // Стили отзывчивых картинок (IBG) ============================================
 [class*="-ibg"] {
