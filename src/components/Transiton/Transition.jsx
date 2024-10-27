@@ -42,7 +42,7 @@ const withTransition = (OgComponent) => {
               },
             }}
           >
-            <img src="/public/icons/logo-blue.svg" alt="" />
+            <img src="./public/icons/logo-blue.svg" alt="" />
           </motion.div>
           {title.map((letter, i) => (
             <motion.div
