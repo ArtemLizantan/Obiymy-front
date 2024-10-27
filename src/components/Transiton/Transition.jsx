@@ -1,5 +1,4 @@
-import React from 'react';
-import { animate, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const withTransition = (OgComponent) => {
   const title = ['O', 'Б', 'І', 'Й', 'М', 'И'];
@@ -43,7 +42,7 @@ const withTransition = (OgComponent) => {
               },
             }}
           >
-            <img src="/icons/logo-blue.svg" alt="" />
+            <img src="/public/icons/logo-blue.svg" alt="" />
           </motion.div>
           {title.map((letter, i) => (
             <motion.div

@@ -1,9 +1,7 @@
-import React from 'react';
-
 const Burger = () => {
   return (
     <div className="burger">
-      <img src="/icons/logo-blue.svg" alt="logo" />
+      <img src="/public/icons/logo-blue.svg" alt="logo" />
       <div className="burger__icon">
         <span className="burger__line"></span>
         <span className="burger__line"></span>
