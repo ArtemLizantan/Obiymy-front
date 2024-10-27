@@ -1,12 +1,12 @@
-import React from "react";
-import Logo from "../Logo";
-import { headerData } from "./header.data";
-import { Link } from "react-router-dom";
-import Button from "../UI/Button";
-import { ROUTES } from "@/constants/routes";
-import { useMediaQuery } from "react-responsive";
-import Burger from "./Burger";
-import MobileHeader from "./MobileHeader/MobileHeader";
+import React from 'react';
+import Logo from '../Logo';
+import { headerData } from './header.data';
+import { Link } from 'react-router-dom';
+import Button from '../UI/Button';
+import { ROUTES } from '@/constants/routes';
+import { useMediaQuery } from 'react-responsive';
+import Burger from './Burger';
+import MobileHeader from './MobileHeader/MobileHeader';
 
 const Header = () => {
   const isTablet = useMediaQuery({ maxWidth: 768 });
@@ -35,14 +35,15 @@ const Header = () => {
           )}
           <div className="header__right">
             <Button
-              color={isTablet ? "#fff" : ""}
-              background={isTablet ? "#5c74f1" : ""}
+              color={isTablet ? '#fff' : ''}
+              background={isTablet ? '#5c74f1' : ''}
               title={headerData.buttonTitle}
               route={ROUTES.TEST}
             />
           </div>
         </div>
       </div>
+      {isTablet && <MobileHeader />}
     </header>
   );
 };

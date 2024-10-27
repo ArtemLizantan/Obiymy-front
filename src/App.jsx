@@ -1,5 +1,4 @@
-import React from "react";
-import Routers from "./pages/routes/Routers";
+import Routers from './pages/routes/Routers';
 
 function App() {
   return <Routers />;

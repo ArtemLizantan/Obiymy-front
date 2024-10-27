@@ -1,3 +1,3 @@
 export const logoData = {
-  title: "OБІЙМИ",
+  title: 'OБІЙМИ',
 };

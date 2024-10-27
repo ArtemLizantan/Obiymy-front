@@ -1,8 +1,8 @@
-import React from "react";
-import { animate, motion } from "framer-motion";
+import React from 'react';
+import { animate, motion } from 'framer-motion';
 
 const withTransition = (OgComponent) => {
-  const title = ["O", "Б", "І", "Й", "М", "И"];
+  const title = ['O', 'Б', 'І', 'Й', 'М', 'И'];
 
   return () => (
     <>
@@ -11,10 +11,10 @@ const withTransition = (OgComponent) => {
         className="fixed flex z-50 left-0 w-full h-full bg-white origin-bottom justify-center items-center overflow-hidden"
         initial={{ top: 0 }}
         animate={{
-          top: "-100vh",
+          top: '-100vh',
           transition: { duration: 1.5, delay: 0.75, ease: [0.76, 0, 0.24, 1] },
           transitionEnd: {
-            top: "100vh",
+            top: '100vh',
           },
         }}
         exit={{
@@ -27,7 +27,7 @@ const withTransition = (OgComponent) => {
             initial={{ y: 0, opacity: 1 }}
             animate={{
               opacity: 1,
-              y: "-140%",
+              y: '-140%',
               transition: {
                 duration: 1,
                 delay: 0.2,
@@ -51,7 +51,7 @@ const withTransition = (OgComponent) => {
               initial={{ y: 0, opacity: 1 }}
               animate={{
                 opacity: 1,
-                y: "-100%",
+                y: '-100%',
                 transition: {
                   duration: 1,
                   delay: 0.35 + i * 0.05,

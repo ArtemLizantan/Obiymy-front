@@ -1,10 +1,10 @@
-import Logo from "@/components/Logo";
-import React from "react";
-import { mobileData } from "./mobile.data";
-import { Link } from "react-router-dom";
-import { IoIosArrowDown } from "react-icons/io";
-import Button from "@/components/UI/Button";
-import { IoMdClose } from "react-icons/io";
+import Logo from '@/components/Logo';
+import React from 'react';
+import { mobileData } from './mobile.data';
+import { Link } from 'react-router-dom';
+import { IoIosArrowDown } from 'react-icons/io';
+import Button from '@/components/UI/Button';
+import { IoMdClose } from 'react-icons/io';
 
 const MobileHeader = () => {
   return (
@@ -26,7 +26,7 @@ const MobileHeader = () => {
                       <Link className="mobile-menu__link" to={path}>
                         {title}
                       </Link>
-                      <IoIosArrowDown / >
+                      <IoIosArrowDown />
                     </div>
 
                     <ul className="mobile-menu__dropdown">
@@ -54,7 +54,12 @@ const MobileHeader = () => {
             </ul>
           </div>
           <div className="mobile-menu__bottom">
-            <Button color="#fff" background="#5c74f1"  route={mobileData.btnPath} title={mobileData.btnTitle} />
+            <Button
+              color="#fff"
+              background="#5c74f1"
+              route={mobileData.btnPath}
+              title={mobileData.btnTitle}
+            />
           </div>
         </div>
         <div className="mobile-menu__contacts">
@@ -65,7 +70,7 @@ const MobileHeader = () => {
                   {title}
                 </Link>
               </li>
-            ))} 
+            ))}
           </ul>
         </div>
       </div>

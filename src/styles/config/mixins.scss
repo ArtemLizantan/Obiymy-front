@@ -28,19 +28,19 @@
   // Источник: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
   $slope: math.div(($startSize - $minSize), ($widthFrom - $widthTo));
   $yIntersection: -$widthTo * $slope + $minSize;
-  $flyValue: #{rem($yIntersection)}" + " #{$slope * 100}vw;
+  $flyValue: #{rem($yIntersection)}' + ' #{$slope * 100}vw;
 
   // Получение значения свойства
-  $propertyValue: #{"clamp(" rem($minSize) "," $flyValue "," rem($startSize) ")"};
+  $propertyValue: #{'clamp(' rem($minSize) ',' $flyValue ',' rem($startSize) ')'};
   // Если отрицательные значения
   @if ($minSize > $startSize) {
-    $propertyValue: #{"clamp("
+    $propertyValue: #{'clamp('
       rem($startSize)
-      ","
+      ','
       $flyValue
-      ","
+      ','
       rem($minSize)
-      ")"};
+      ')'};
   }
 
   @if $widthFrom ==
@@ -177,7 +177,7 @@
 // !after-before
 @mixin afterBefore($type, $pos: absolute) {
   &::#{$type} {
-    content: "";
+    content: '';
     position: $pos;
     @content;
   }
@@ -188,8 +188,9 @@
   @font-face {
     font-family: $font_name;
     font-display: swap;
-    src: url("../fonts/#{$file_name}.woff") format("woff"),
-      url("../fonts/#{$file_name}.woff2") format("woff2");
+    src:
+      url('../fonts/#{$file_name}.woff') format('woff'),
+      url('../fonts/#{$file_name}.woff2') format('woff2');
     font-weight: #{$weight};
     font-style: #{$style};
   }

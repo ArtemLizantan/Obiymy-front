@@ -1,7 +1,7 @@
-import { ROUTES } from "@/constants/routes";
-import React from "react";
-import { Link } from "react-router-dom";
-import { logoData } from "./logo.data";
+import { ROUTES } from '@/constants/routes';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { logoData } from './logo.data';
 
 const Logo = ({ blue = false }) => {
   return blue ? (

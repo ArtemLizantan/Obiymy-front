@@ -27,7 +27,7 @@ html {
 * всем классам содержащим *__container
 * Например header__container, main__container и т.д.
 */
-[class*="__container"] {
+[class*='__container'] {
   max-width: rem($containerWidth + $mainOffset * 2);
   margin: 0 auto;
   padding: 0 rem($mainOffset);
@@ -38,7 +38,7 @@ html {
   }
 }
 // Стили отзывчивых картинок (IBG) ============================================
-[class*="-ibg"] {
+[class*='-ibg'] {
   position: relative;
   img {
     position: absolute;
@@ -49,13 +49,13 @@ html {
     object-fit: cover;
   }
 }
-[class*="-ibg_contain"] {
+[class*='-ibg_contain'] {
   img {
     object-fit: contain;
   }
 }
 // Стили для обертки модальных окон ===========================================
-[class*="_overlay-bg"] {
+[class*='_overlay-bg'] {
   position: fixed;
   top: 0;
   left: 0;
