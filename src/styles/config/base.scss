@@ -1,7 +1,6 @@
 body {
   background: gray;
   color: $whiteColor;
-  font-family: $mainFont;
   &.lock {
     overflow: hidden;
     touch-action: none;
