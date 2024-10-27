@@ -68,8 +68,8 @@
   top: 0;
   width: 100%;
   background: $whiteColor;
-  padding: 17px 15px 100px 15px;
-  min-height: 100vh;
+  padding: 31px 15px 100px 15px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
@@ -78,10 +78,10 @@
     svg {
       fill: $blueColor;
       width: 35px;
-      height: 15px;
+      height: 35px;
       @media (max-width: $md4+px) {
-        width: 15px;
-        height: 15px;
+        width: 25px;
+        height: 25px;
       }
     }
   }
@@ -99,12 +99,19 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
+    a {
+      margin-left: 14px;
+    }
+    img {
+      width: 32px;
+      height: 19px;
+    }
   }
   &__list {
     display: flex;
     flex-direction: column;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
   }
   &__link {
     display: block;
@@ -144,6 +151,7 @@
   }
   &__bottom {
     width: 100%;
+    margin-bottom: 70px;
     a {
       width: 100%;
       padding: 25px 5px;
@@ -158,6 +166,7 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 30px;
   }
   &__contacts-link {
     font-weight: 500;
