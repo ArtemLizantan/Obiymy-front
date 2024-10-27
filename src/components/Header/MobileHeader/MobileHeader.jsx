@@ -26,7 +26,7 @@ const MobileHeader = () => {
                       <Link className="mobile-menu__link" to={path}>
                         {title}
                       </Link>
-                      <IoIosArrowDown />
+                      <IoIosArrowDown / >
                     </div>
 
                     <ul className="mobile-menu__dropdown">
@@ -65,7 +65,7 @@ const MobileHeader = () => {
                   {title}
                 </Link>
               </li>
-            ))}
+            ))} 
           </ul>
         </div>
       </div>

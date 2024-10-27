@@ -72,6 +72,19 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
+
+  &__close {
+    svg {
+      fill: $blueColor;
+      width: 35px;
+      height: 15px;
+      @media (max-width: $md4+px) {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
   &__wrap {
     display: flex;
     flex-direction: column;
@@ -86,35 +99,42 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 80px;
   }
   &__list {
     display: flex;
     flex-direction: column;
+    margin-bottom: 80px;
   }
   &__link {
     display: block;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 36px;
     letter-spacing: -0.02em;
     color: $blueColor;
     width: 100%;
     padding: 10px 0;
+    @media (max-width: $md4+px) {
+      font-size: 32px;
+    }
   }
   &__dropdown-link {
     display: block;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 20px;
     letter-spacing: -0.02em;
     color: $blueColor;
     width: 100%;
     padding: 10px 0;
     font-weight: 500;
+    @media (max-width: $md4+px) {
+      font-size: 18px;
+    }
   }
   &__dropdown-li {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 10px;
     svg {
       fill: $blueColor;
     }
@@ -126,7 +146,11 @@
     width: 100%;
     a {
       width: 100%;
-      padding: 20px 5px;
+      padding: 25px 5px;
+      font-size: 20px;
+      @media (max-width: $md4+px) {
+        padding: 20px 5px;
+      }
     }
   }
   &__contacts-list {
@@ -137,12 +161,17 @@
   }
   &__contacts-link {
     font-weight: 500;
-    font-size: 20px;
+    font-size: 22px;
     line-height: 125%;
     letter-spacing: -0.01em;
     color: $blueColor;
     padding: 10px 0;
-
+    display: block;
+    min-width: 250px;
+    @media (max-width: $md4+px) {
+      min-width: 150px;
+      font-size: 20px;
+    }
     @media (max-width: $md4+px) {
       font-size: 16px;
     }
