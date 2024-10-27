@@ -8758,7 +8758,7 @@ try {
 }
 const START_TRANSITION = "startTransition";
 const startTransitionImpl = React$1[START_TRANSITION];
-function BrowserRouter$1(_ref4) {
+function BrowserRouter(_ref4) {
   let {
     basename,
     children,
@@ -16646,7 +16646,7 @@ const AppRoutes = () => {
   ] }) }, location.pathname) });
 };
 const Routers = () => {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(BrowserRouter$1, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(AppRoutes, {}) });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(BrowserRouter, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(AppRoutes, {}) });
 };
 function App() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(Routers, {});
@@ -16656,4 +16656,4 @@ const isProd = define_process_env_default.VITE_NODE_ENV === "production";
 client.createRoot(document.getElementById("root")).render(
   /* @__PURE__ */ jsxRuntimeExports.jsx(React.StrictMode, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(BrowserRouter, { basename: isProd ? "/Obiymy-front/" : "/", children: /* @__PURE__ */ jsxRuntimeExports.jsx(y, { root: true, children: /* @__PURE__ */ jsxRuntimeExports.jsx(App, {}) }) }) })
 );
-//# sourceMappingURL=index-DRa6ltaC.js.map
+//# sourceMappingURL=index-BHJ0a2y4.js.map
