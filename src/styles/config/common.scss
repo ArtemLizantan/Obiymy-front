@@ -58,11 +58,20 @@
   font-weight: 400;
   font-size: rem(18);
   color: $blueColor;
-  -webkit-border-radius: rem(100);
-  -moz-border-radius: rem(100);
-  -ms-border-radius: rem(100);
-  -o-border-radius: rem(100);
-
+  position: relative;
+  transition: 0.4s ease;
+  &.active {
+    color: $whiteColor;
+  }
+  &__hover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0%;
+    right: 0;
+    background-color: #6b84c6;
+    z-index: -1;
+  }
   @media (max-width: $md3+px) {
     padding: 15px 25px;
     border-radius: 15px;
